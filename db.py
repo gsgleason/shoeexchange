@@ -1,10 +1,7 @@
-import configparser
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session
 from sqlalchemy.orm import sessionmaker
-
-config = configparser.ConfigParser()
-config.read("/home/shoeexchange/shoeexchange/config.ini")
+from config import config
 
 database_uri = "mysql+mysqldb://{username}:{password}@{hostname}/{database}".format(
 	username=config['mysql']['username'],

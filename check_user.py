@@ -1,5 +1,4 @@
 import threading
-import configparser
 from reddit import get_reddit
 
 def set_gyw_score(user):

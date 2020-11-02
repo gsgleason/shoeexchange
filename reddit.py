@@ -1,8 +1,5 @@
 import praw
-import configparser
-
-config = configparser.ConfigParser()
-config.read("config.ini")
+from config import config
 
 def get_reddit():
     return praw.Reddit(
