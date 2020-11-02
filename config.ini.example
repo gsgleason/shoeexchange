@@ -1,0 +1,16 @@
+[praw]
+user_agent = WhateverBot
+client_id = 12345
+client_secred = 12345
+username = WhateverBot
+password = password1234
+
+[mysql]
+username = user
+password = password1234
+hostname = db.example.com
+database = mydb
+
+[pythonanywhere]
+username = user
+password = password1234
