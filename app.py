@@ -5,7 +5,7 @@ from models import Listing
 app = Flask(__name__)
 
 @app.teardown_appcontext
-def cleanup(resp_or_exc):
+def shutdown_session(exception=None):
     Session.remove()
 
 @app.route('/')
