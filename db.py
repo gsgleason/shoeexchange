@@ -12,4 +12,4 @@ database_uri = "mysql+mysqldb://{username}:{password}@{hostname}/{database}".for
 
 engine = create_engine(database_uri)
 
-Session = scoped_session(sessionmaker(bind=engine))
+Session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
