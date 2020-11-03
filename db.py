@@ -10,6 +10,6 @@ database_uri = "mysql+mysqldb://{username}:{password}@{hostname}/{database}".for
 	database=config['mysql']['database']
 )
 
-engine = create_engine(database_uri)
+engine = create_engine(database_uri, pool_timeout=20, pool_recycle=299)
 
 Session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
