@@ -11,5 +11,5 @@ def shutdown_session(exception=None):
 @app.route('/')
 def index():
 	listings = Session.query(Listing).all()
-	return render_template('index.html', listings=listings)
+	return render_template('redirect.html', listings=listings)
 
